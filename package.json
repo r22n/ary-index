@@ -1,6 +1,6 @@
 {
   "name": "ary-index",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "calculate index of array with multi dimensions",
   "main": "index.js",
   "scripts": {

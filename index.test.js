@@ -10,6 +10,8 @@ describe('test array index', () => {
         expect(a.get(0)).toEqual(2);
         expect(a.get(1)).toEqual(3);
         expect(a.get(2)).toEqual(5);
+        expect(a.set(7, 1)).toEqual(1);
+        expect(a.get(1)).toEqual(7);
     });
     it('get/set two dimensions', () => {
         const a = fromary([
@@ -27,6 +29,8 @@ describe('test array index', () => {
         expect(a.get(1, 2)).toEqual(13);
         expect(a.get(2, 0)).toEqual(17);
         expect(a.get(2, 2)).toEqual(23);
+        expect(a.set(29, 1, 1)).toEqual(4);
+        expect(a.get( 1, 1)).toEqual(29);
     });
     it('get/set four dimensions', () => {
         const a = fromary([
@@ -53,6 +57,8 @@ describe('test array index', () => {
         expect(a.get(0, 0, 0, 2)).toEqual(5);
         expect(a.get(1, 1, 0, 2)).toEqual(73);
         expect(a.get(1, 1, 1, 2)).toEqual(89);
+        expect(a.set(101, 0, 1, 1, 2)).toEqual(11);
+        expect(a.get(0, 1, 1, 2)).toEqual(101);
     });
     it('minimum length', () => {
         const a = fromary([3], [1, 1, 1, 1, 1, 1]);
@@ -61,5 +67,5 @@ describe('test array index', () => {
         expect(a.get(0, 0, 0, 0, 0, 0)).toEqual(3);
         expect(b.get(0)).toEqual(3);
         expect(c.get(0, 0)).toEqual(3);
-    });
+    }); 
 });
