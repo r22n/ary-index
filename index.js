@@ -1,6 +1,17 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.fromary = void 0;
+/**
+ * obtains multi dimension index array.
+ *
+ * if the 'source.length' is smaller than 'length', index are unspecified.
+ *
+ * the 'source' will be refered by return value.
+ *
+ * 'fromary' returns undefined, if length contains 0.
+ *
+ * 'length' fields should be positive integer because of 'fromary' does not check it.
+ */
 function fromary(source, length) {
     if (length.some(x => x <= 0)) {
         return;
